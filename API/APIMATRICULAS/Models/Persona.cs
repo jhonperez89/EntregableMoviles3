@@ -9,6 +9,7 @@ namespace APIMATRICULAS.Models
     public class Persona
     {
         [Required]
+        [Key]
         public int id { get; set; }
         [Required]
         public string nif { get; set; }

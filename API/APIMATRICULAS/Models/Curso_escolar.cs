@@ -9,6 +9,7 @@ namespace APIMATRICULAS.Models
     public class Curso_escolar
     {
         [Required]
+        [Key]
         public int id { get; set; }
         [Required]
         public int ano_inicio { get; set; }

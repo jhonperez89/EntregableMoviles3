@@ -1,3 +1,4 @@
+using APIMATRICULAS.Data;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -10,6 +11,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+
+using Microsoft.EntityFrameworkCore;
 
 namespace APIMATRICULAS
 {
@@ -27,7 +30,7 @@ namespace APIMATRICULAS
         {
             // Vamos a preparar los parametros para crear la DB en sqlServer
             //
-            services.AddDbContext<ProfesorContexto> option => UseExtensions(Configuration.GetConnectionString("ConexionMatriculas").ToString());
+            services.AddDbContext<ConjuntoDeDatosContexto>( option => option.UseSqlServer(Configuration.GetConnectionString("ConexionMatriculas")));
 
             services.AddControllers();
         }

@@ -9,13 +9,15 @@ using System.Threading.Tasks;
 
 namespace APIMATRICULAS.Controllers
 {
+    [Route("api/[Controler]")]
+    [ApiController]
     public class ProfesoresController : ControllerBase
     {
         // creaamos el objeto que apiunta a la clase profesorContexto para poder tener acceso a todos los campos de la tabla
         //
-        private readonly ProfesorContexto _context;
+        private readonly ConjuntoDeDatosContexto _context;
 
-        public ProfesoresController(ProfesorContexto contexto)
+        public ProfesoresController(ConjuntoDeDatosContexto contexto)
         {
             //Cargamos la variable objeto con los campos de la tabla
             //

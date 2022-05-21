@@ -8,7 +8,7 @@ namespace APIMATRICULAS.Models
 {
     public class Profesor
     {
-        [Required]
+        [Key]
         public int id_profesor { get; set; }
         [Required]
         public int id_departamento { get; set; }

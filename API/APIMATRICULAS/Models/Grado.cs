@@ -9,6 +9,7 @@ namespace APIMATRICULAS.Models
     public class Grado
     {
         [Required]
+        [Key]
         public int id { get; set; }
         [Required]
         public string nombre { get; set; }
